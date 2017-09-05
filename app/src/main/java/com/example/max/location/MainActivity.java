@@ -2,23 +2,17 @@ package com.example.max.location;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.*;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity   {
 
-    Button button;
-     MapFragment googleMap;
+    private Button button;
+    private GoogleMap googleMap;
     DownloadFile downloadFile = new DownloadFile();
-
 
 
     @Override
@@ -26,11 +20,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button);
-
-
+        googleMap = ((MapFragment) getFragmentManager().findFragmentById(
+                R.id.mapView)).getMap();
 
 
     }
+
 
     public void pushButton(View view) {
 
