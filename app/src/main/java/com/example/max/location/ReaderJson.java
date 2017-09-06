@@ -2,6 +2,8 @@ package com.example.max.location;
 
 /**
  * Created by max on 9/4/17.
+ * <p>
+ * The method get path for file, convert Object to JSONObject and return JsonArray.
  */
 
 import com.google.gson.JsonArray;
@@ -24,6 +26,7 @@ public class ReaderJson {
 
     public JsonArray reader() {
         JsonParser parser = new JsonParser();
+
         try {
 
             Object object = parser.parse(new FileReader(path));

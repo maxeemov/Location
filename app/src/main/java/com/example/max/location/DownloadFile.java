@@ -37,9 +37,9 @@ class DownloadFile extends AsyncTask<String, Integer, String> {
 
             // download the file
             input = connection.getInputStream();
-            output = new FileOutputStream("/storage/emulated/0/Download/route.txt");
+            output = new FileOutputStream("/storage/emulated/0/Download/route.txt"); //the path of file for writing
 
-            byte data[] = new byte[4096];
+            byte data[] = new byte[1024];
             int count;
             while ((count = input.read(data)) != -1) {
 
